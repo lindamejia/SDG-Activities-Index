@@ -1,0 +1,69 @@
+body {
+  font-family: sans-serif;
+}
+
+.add-project {
+  padding: 20px !important;
+  background-color: #e5253b !important;
+  border-color: #e5253b !important;
+}
+
+.popover {
+  max-width: 600px !important;
+  padding: 20px;
+  pointer-events: none;
+}
+
+.btn-link {
+  color: #6c757d !important;
+}
+
+.dropdown-menu {
+  transform: translate3d(5px, 35px, 0px) !important;
+}
+
+.card {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: 4px 10px 10px 4px #afafaf;
+}
+
+.card-title {
+  font-weight: 200 !important;
+  font-size: 2rem !important;
+}
+
+.card-body {
+  flex: none !important;
+  padding-top: 0px !important;
+}
+
+/* FORM */
+
+.MuiSelect-selectMenu {
+  height: auto !important;
+  white-space: normal !important;
+}
+
+.MuiMenu-list {
+  height: 200px;
+}
+
+/*Collapse*/
+
+.collapse.width {
+  -webkit-transition-property: width, visibility;
+  transition-property: width, visibility;
+  /* width: 0;
+  height: auto; */
+}
+
+
+/*Collapse*/
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .card-column .card {
+    column-count: auto;
+  }
+}

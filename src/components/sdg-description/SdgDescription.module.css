@@ -1,0 +1,29 @@
+.mainBox {
+  width: 40%;
+  height: 100px;
+  margin: auto;
+  padding: 10px 10px 50px 10px;
+  box-shadow: 0 8px 6px -6px rgb(148, 147, 147);
+}
+
+.description {
+  color: white;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.image {
+  max-height: 200%;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mainBox {
+    width: 70%;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}

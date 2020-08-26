@@ -1,0 +1,129 @@
+.sdgImage:hover {
+  cursor: pointer;
+  height: 62px;
+  box-shadow: 2px 5px 5px 2px #afafaf;
+}
+
+.readMore {
+  color: white !important;
+  padding-top:20px;
+}
+
+.readMore:hover {
+  text-decoration: underline !important;
+}
+
+.theme {
+  background-color: #e4e5e6;
+  border-radius: 10px;
+  color: #455262;
+  font-size: 14px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.themes {
+  margin-bottom: 20px;
+  margin-top: auto;
+}
+
+.theme:hover {
+  cursor: pointer;
+  box-shadow: 2px 5px 5px 2px #afafaf;
+}
+
+.flipIcon {
+  margin-bottom: 10px;
+  float: right;
+}
+
+.flipIcon:hover {
+  cursor: pointer;
+  font-size: 17px;
+  text-shadow: 2px 2px 5px #afafaf;
+}
+
+.sector:hover {
+  cursor: pointer;
+  font-size: 17px;
+  text-shadow: 2px 2px 5px #afafaf;
+}
+
+.organization:hover {
+  cursor: pointer;
+  font-size: 17px;
+  text-shadow: 2px 2px 5px #afafaf;
+}
+
+.orgIcon {
+  float: left;
+  color: #ff9244;
+}
+
+.projIcon {
+  float: left;
+  color: #2c88c8;
+}
+
+/* Horizontal Masonry  */
+
+.masonry {
+  display: flex;
+  flex-flow: row wrap;
+  /* margin-left: -8px; Adjustment for the gutter */
+  width: 100%;
+}
+
+.masonryBrick {
+  flex: auto;
+  /* height: 250px;
+  min-width: auto; */
+  margin: 20px; /* Some gutter */
+}
+
+/* .masonryBrick:nth-child(4n+1) {
+  width: 250px;
+}
+.masonryBrick:nth-child(4n+1):nth-child(4n+2) {
+  width: 325px;
+}
+.masonryBrick:nth-child(4n+1):nth-child(4n+3) {
+  width: 180px;
+}
+.masonryBrick:nth-child(4n+1):nth-child(4n+4) {
+  width: 380px;
+} */
+
+/*CSS for sliding project we're not using*/
+/* 
+.accordion {
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  margin-top: -1px;
+  line-height: 0px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  white-space: nowrap;
+  color: white;
+}
+
+
+.wrap {
+  display: flex;
+}
+
+.wrap > div {
+  height: 100px;
+  width: 33%;
+  flex: 1;
+  border: 1px solid #f00;
+  -webkit-transition: flex .5s;
+  transition: flex .5s;
+}
+
+.wrap > div:hover {
+  flex: 3;
+} */

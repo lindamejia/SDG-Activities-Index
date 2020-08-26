@@ -1,0 +1,13 @@
+.filter {
+  background-color: #e4e5e6;
+  border-radius: 10px;
+  color: #455262;
+  font-size: 14px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.resetButton{
+  padding-top: 0 !important;
+}
