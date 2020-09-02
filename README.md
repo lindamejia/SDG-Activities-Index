@@ -1,1 +1,1 @@
-# SDg-Activities-Index
+# SDG-Activities-Index
