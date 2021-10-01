@@ -28,7 +28,6 @@ class Project extends React.Component {
   };
 
   flipCard = (data) => {
-    console.log(data);
     let cardHeight = document.getElementById(data).offsetHeight;
     this.setState((prevState) => ({
       isFlipped: {
@@ -67,7 +66,7 @@ class Project extends React.Component {
     const sdgImages = finalArray.map((data, index) => (
       <img
         key={index}
-        onClick={() => this.props.selectGoal(data.sdg, index)}
+        onClick={() => this.props.selectGoal(data.SDG, index)}
         src={data.image}
         width="auto"
         height="60"
@@ -171,9 +170,9 @@ class Project extends React.Component {
                     <p
                       style={{ color: "#455262", marginTop: "20px" }}
                       className={style.sector}
-                      onClick={() => this.props.selectSector(data.sector)}
+                      onClick={() => this.props.selectSector(data.Sector)}
                     >
-                      {data.sector}
+                      {data.Sector}
                     </p>
 
                     <Card.Body>
@@ -181,28 +180,28 @@ class Project extends React.Component {
                         style={{
                           fontSize: "20px",
                           color:
-                            data.activitytype === "organization"
+                            data['Activity Type'] === "organization"
                               ? "#ff9244"
                               : "#2c88c8",
                         }}
                       >
-                        {data.projectname}
+                        {data['Project Name']}
                       </Card.Title>
                       <Card.Text
                         className={style.organization}
                         onClick={() =>
-                          this.props.oneOrgSelected(data.organization)
+                          this.props.oneOrgSelected(data.Organization)
                         }
                       >
-                        {data.organization}
+                        {data.Organization}
                       </Card.Text>
                     </Card.Body>
-                    <Card.Text>{this.getSdgImages(data.sdg)}</Card.Text>
+                    <Card.Text>{this.getSdgImages(data.SDG)}</Card.Text>
                     <div
                       className={style.themes}
                       style={{ display: "inline-block" }}
                     >
-                      {this.displayThemes(data.theme)}
+                      {this.displayThemes(data.Theme)}
                     </div>
                   </Col>
 
@@ -210,7 +209,7 @@ class Project extends React.Component {
                     className="col-1"
                     style={{
                       backgroundColor:
-                        data.activitytype === "organization"
+                        data['Activity Type'] === "organization"
                           ? "#ff9244"
                           : "#2c88c8",
                     }}
@@ -223,7 +222,7 @@ class Project extends React.Component {
                     >
                       See {open[data.id] === true ? "Less " : "More "} About
                       This{" "}
-                      {data.activitytype === "organization"
+                      {data['Activity Type'] === "organization"
                         ? "Organization"
                         : "Project"}
                     </div>
@@ -237,19 +236,19 @@ class Project extends React.Component {
                         color: "white",
                         textAlign: "center",
                         backgroundColor:
-                          data.activitytype === "organization"
+                          data['Activity Type'] === "organization"
                             ? "#ff9244"
                             : "#2c88c8",
                       }}
                     >
                       <Card.Body className="p-3">
-                        <Card.Title>{data.projectname}</Card.Title>
-                        <Card.Text>{data.organization}</Card.Text>
-                        <small>{data.description}</small>
+                        <Card.Title>{data['Project Name']}</Card.Title>
+                        <Card.Text>{data.Organization}</Card.Text>
+                        <small>{data.Description}</small>
                         <br />
                         <a
                           className={style.readMore}
-                          href={`${data.website}`}
+                          href={`${data.Website}`}
                           target="_blank"
                         >
                           Read More
