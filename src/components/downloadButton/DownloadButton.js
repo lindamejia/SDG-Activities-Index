@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import { Button, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { jsonToCSV } from "react-papaparse";
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 import style from "./Download.module.css";
 
 export default class DownloadButton extends Component {
   render() {
     const fields = [
-      "projectname",
-      "description",
-      "organization",
-      "theme",
-      "sector",
-      "sdg",
-      "website",
-      "activitytype",
+      "Project Name",
+      "Description",
+      "Organization",
+      "Theme",
+      "Sector",
+      "SDG",
+      "Website",
+      "Activity Type",
     ];
     const csvData = jsonToCSV({ fields: fields, data: this.props.projects });
     return (
@@ -28,7 +28,7 @@ export default class DownloadButton extends Component {
               data={csvData}
               filename={"Activities_Index_Data.csv"}
             >
-              Download Data <i class="fas fa-download"></i>
+              Download Data <i className="fas fa-download"></i>
             </CSVLink>
           </Button>
         </OverlayTrigger>

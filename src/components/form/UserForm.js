@@ -58,6 +58,7 @@ const UserForm = (props) => {
               goals={props.goals}
             />
           );
+        // no default
       }
       break;
     case 3:
@@ -78,6 +79,7 @@ const UserForm = (props) => {
               prevStep={prevStep}
             />
           );
+        // no default
       }
       break;
     default:

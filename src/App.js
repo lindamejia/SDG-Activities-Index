@@ -64,7 +64,7 @@ class App extends React.Component {
   spreadsheeetSuccess = (data) => {
     let themesSplit = [];
     let themesList = [];
-    const themesArray = data.map((data) => data.theme);
+    const themesArray = data.map((data) => data.Theme);
     for (let i = 0; i < themesArray.length; i++) {
       themesSplit.push(themesArray[i].split(","));
     }
@@ -74,7 +74,7 @@ class App extends React.Component {
     }
     const themesArrayNoDuplicates = Array.from(new Set(themesList));
     const themesAlphabetical = themesArrayNoDuplicates.sort();
-    const sectorsArray = data.map((data) => data.sector);
+    const sectorsArray = data.map((data) => data.Sector);
     const sectorsArrayNoDuplicates = Array.from(new Set(sectorsArray));
     const sectorsAlphabetical = sectorsArrayNoDuplicates.sort();
     this.setState({
@@ -165,30 +165,30 @@ class App extends React.Component {
 
     if (this.state.theme) {
       result = result.filter((project) =>
-        project.theme.includes(this.state.theme)
+        project.Theme.includes(this.state.theme)
       );
     }
     if (this.state.sdg) {
       this.props.history.push(`${this.state.sdg}`);
       result = result.filter((project) =>
-        project.sdg.split(",").includes(this.state.sdg)
+        project.SDG.split(",").includes(this.state.sdg)
       );
     }
     if (this.state.sector) {
-      result = result.filter((project) => project.sector === this.state.sector);
+      result = result.filter((project) => project.Sector === this.state.sector);
     }
     if (this.state.organization) {
       result = result.filter(
-        (project) => project.organization === this.state.organization
+        (project) => project.Organization === this.state.organization
       );
     }
     if (this.state.activitytype) {
       if (this.state.activitytype === "project") {
-        result = result.filter((project) => project.activitytype === "project");
+        result = result.filter((project) => project['Activity Type'] === "project");
       }
       if (this.state.activitytype === "organization") {
         result = result.filter(
-          (project) => project.activitytype === "organization"
+          (project) => project['Activity Type'] === "organization"
         );
       }
     }
@@ -251,7 +251,6 @@ class App extends React.Component {
   };
 
   deleteFilter = (value) => {
-    console.log(value);
     this.setState(
       (prevState) => ({
         filters: prevState.filters.filter((item) => item !== value),

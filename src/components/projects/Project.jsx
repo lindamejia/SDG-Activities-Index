@@ -25,7 +25,6 @@ class Project extends React.Component {
   };
 
   flipCard = (data) => {
-    console.log(data);
     let cardHeight = document.getElementById(data).offsetHeight;
     this.setState((prevState) => ({
       isFlipped: {
@@ -123,7 +122,7 @@ class Project extends React.Component {
       indexOfLastProject
     );
     const indexTest = this.state.currentPage * currentProjects.length - 1;
-
+    
     return (
       <div className={style.projects}>
         <Container>
@@ -163,7 +162,7 @@ class Project extends React.Component {
                     key="front"
                   >
                     <div>
-                      {data.activitytype === "organization" ? (
+                      {data['Activity Type'] === "organization" ? (
                         <i
                           className={`${style.orgIcon} fas fa-city fa-lg`}
                           size="5x"
@@ -190,37 +189,37 @@ class Project extends React.Component {
                     <p
                       style={{ color: "#455262" }}
                       className={style.sector}
-                      onClick={() => this.props.selectSector(data.sector)}
+                      onClick={() => this.props.selectSector(data.Sector)}
                     >
-                      {data.sector}
+                      {data.Sector}
                     </p>
                     <Card.Body>
                       <Card.Title
                         style={{
                           fontSize: "20px",
                           color:
-                            data.activitytype === "organization"
+                            data['Activity Type'] === "organization"
                               ? "#ff9244"
                               : "#2c88c8",
                         }}
                       >
-                        {data.projectname}
+                        {data['Project Name']}
                       </Card.Title>
                       <Card.Text
-                        className={style.organization}
+                        className={style.Organization}
                         onClick={() =>
-                          this.props.oneOrgSelected(data.organization)
+                          this.props.oneOrgSelected(data.Organization)
                         }
                       >
-                        {data.organization}
+                        {data.Organization}
                       </Card.Text>
                     </Card.Body>
-                    <Card.Text>{this.getSdgImages(data.sdg)}</Card.Text>
+                    <Card.Text>{this.getSdgImages(data.SDG)}</Card.Text>
                     <div
                       className={style.themes}
                       style={{ display: "inline-block" }}
                     >
-                      {this.displayThemes(data.theme)}
+                      {this.displayThemes(data.Theme)}
                     </div>
                   </Card>
 
@@ -232,7 +231,7 @@ class Project extends React.Component {
                       marginTop: "20px",
                       textAlign: "center",
                       backgroundColor:
-                        data.activitytype === "organization"
+                        data['Activity Type'] === "organization"
                           ? "#ff9244"
                           : "#2c88c8",
                     }}
@@ -247,15 +246,16 @@ class Project extends React.Component {
 
                     <br />
 
-                    <Card.Title>{data.projectname}</Card.Title>
-                    <Card.Text>{data.organization}</Card.Text>
-                    <small>{data.description}</small>
+                    <Card.Title>{data['Project Name']}</Card.Title>
+                    <Card.Text>{data.Organization}</Card.Text>
+                    <small>{data.Description}</small>
                     <br />
                     <div style={{ paddingTop: "30px" }}>
                       <a
                         className={style.readMore}
-                        href={`${data.website}`}
+                        href={`${data.Website}`}
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Read More
                       </a>
